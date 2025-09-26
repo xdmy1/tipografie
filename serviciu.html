@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Serviciu - Tipografie Chișinău</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Bar -->
+    <div class="w-full flex h-12">
+        <div class="bg-yellow-400 flex-1 flex items-center justify-center">
+            <a href="index.html" class="text-black font-bold text-lg hover:text-gray-800 transition-colors">TIPOGRAFIE</a>
+        </div>
+        <div class="bg-red-500 flex-1 flex items-center justify-center">
+            <a href="foto-video.html" class="text-white font-bold text-lg hover:text-gray-200 transition-colors">FOTO/VIDEO</a>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="bg-white shadow-lg py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-gray-800">LOGO</div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Acasă</a>
+                    <a href="index.html#despre" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Despre</a>
+                    <a href="index.html#servicii" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Servicii</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</a>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="text-blue-600 font-semibold">+373 600 021 02</div>
+                    <button class="md:hidden ml-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="index.html" class="hover:text-blue-600 transition-colors">Acasă</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <a href="index.html#servicii" class="hover:text-blue-600 transition-colors">Servicii</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span id="breadcrumb-current" class="font-medium text-blue-600">Serviciu</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Details -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img id="service-image" src="https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=Serviciu" alt="Serviciu" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div>
+                    <h1 id="service-title" class="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Serviciu Tipografie</h1>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-red-500 mb-8"></div>
+                    <div id="service-description" class="text-lg text-gray-600 mb-8 space-y-4">
+                        <p>Descrierea serviciului va fi afișată aici prin JavaScript.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                            Solicită Ofertă
+                        </button>
+                        <button class="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Contactează-ne
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Caracteristici -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Caracteristici Principale</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Calitate Premium</h4>
+                    <p class="text-gray-600">Folosim materiale de cea mai bună calitate pentru rezultate excepționale.</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Livrare Rapidă</h4>
+                    <p class="text-gray-600">Respectăm termenele și livrăm în cel mai scurt timp posibil.</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                    <div class="bg-yellow-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Preț Competitiv</h4>
+                    <p class="text-gray-600">Cele mai bune prețuri pe piața din Chișinău pentru servicii de calitate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicii Similare -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Servicii Similare</h2>
+            <div id="similar-services" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviciile similare vor fi generate dinamic de JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Gata să începem?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Contactează-ne pentru o consultație gratuită și să discutăm despre proiectul tău.</p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Sună Acum
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                    Trimite Email
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold mb-4">LOGO</h5>
+                    <p class="text-gray-400">Tipografia ta de încredere din Chișinău. Calitate superioară la prețuri corecte.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Linkuri Rapide</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Acasă</a></li>
+                        <li><a href="index.html#despre" class="hover:text-white transition-colors">Despre</a></li>
+                        <li><a href="index.html#servicii" class="hover:text-white transition-colors">Servicii</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Contact</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>+373 600 021 02</li>
+                        <li>contact@tipografiechisinau.md</li>
+                        <li>Chișinău, Moldova</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Urmărește-ne</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <span class="text-sm">f</span>
+                        </a>
+                        <a href="#" class="bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <span class="text-sm">t</span>
+                        </a>
+                        <a href="#" class="bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
+                            <span class="text-sm">i</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Tipografie Chișinău. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load service details when page loads
+        window.addEventListener('DOMContentLoaded', loadServiceDetails);
+    </script>
+</body>
+</html>

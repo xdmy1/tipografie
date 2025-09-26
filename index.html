@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografie Chișinău - Prețuri corecte, Calitate superioară</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Bar -->
+    <div class="w-full flex h-12">
+        <div class="bg-yellow-400 flex-1 flex items-center justify-center">
+            <a href="index.html" class="text-black font-bold text-lg hover:text-gray-800 transition-colors">TIPOGRAFIE</a>
+        </div>
+        <div class="bg-red-500 flex-1 flex items-center justify-center">
+            <a href="foto-video.html" class="text-white font-bold text-lg hover:text-gray-200 transition-colors">FOTO/VIDEO</a>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="bg-white shadow-lg py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-gray-800">LOGO</div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Acasă</a>
+                    <a href="#despre" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Despre</a>
+                    <a href="#servicii" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Servicii</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</a>
+                </div>
+
+                <div class="flex items-center">
+                    <div class="text-blue-600 font-semibold">+373 600 021 02</div>
+                    <button class="md:hidden ml-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 via-purple-600 to-red-500 text-white py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">TIPOGRAFIE CHIȘINĂU</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-yellow-300">Prețuri corecte - Calitate superioară</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Descriere scurta lorem ipsum dolor sit amet, consectetur adipiscing elit. Oferim cele mai bune servicii de tipografie din Chișinău.</p>
+            <button onclick="scrollToServices()" class="bg-yellow-400 text-black px-8 py-4 rounded-full text-lg font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Vezi Servicii
+            </button>
+        </div>
+    </section>
+
+    <!-- Serviciile Noastre -->
+    <section id="servicii" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">Serviciile Noastre</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mb-16"></div>
+            <div id="services-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Serviciile vor fi generate dinamic de JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Despre Noi -->
+    <section id="despre" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=Tipografie" alt="Despre Noi" class="rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Despre Noi</h3>
+                    <p class="text-lg text-gray-600 mb-6">Cu peste 15 ani de experiență în domeniul tipografiei, suntem lideri în oferirea de soluții de printare de înaltă calitate în Chișinău. Echipa noastră de profesioniști este dedicată să vă ofere cele mai bune produse la prețuri accesibile.</p>
+                    <p class="text-lg text-gray-600 mb-6">Ne mândrim cu echipamentele moderne și tehnologiile de ultimă generație care ne permit să realizăm orice proiect, indiferent de complexitate.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold">15+ Ani Experiență</div>
+                        <div class="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold">1000+ Clienți Mulțumiți</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- De ce să ne alegi -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">De ce să ne alegi?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-gray-800">Calitate Superioară</h4>
+                    <p class="text-gray-600">Folosim cele mai bune materiale și tehnologii moderne pentru rezultate impecabile.</p>
+                </div>
+
+                <div class="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-gray-800">Rapiditate</h4>
+                    <p class="text-gray-600">Livrăm rapid și respectăm întotdeauna termenele stabilite cu clienții.</p>
+                </div>
+
+                <div class="text-center p-8 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="bg-yellow-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-gray-800">Prețuri Corecte</h4>
+                    <p class="text-gray-600">Oferim cele mai competitive prețuri pe piață, fără compromisuri la calitate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recenzii -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">Ce spun clienții noștri</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">MV</div>
+                        <div class="ml-4">
+                            <h5 class="font-bold text-gray-800">Maria Vasilache</h5>
+                            <div class="flex text-yellow-400">
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Servicii excelente! Am comandat cărți de vizită și sunt foarte mulțumită de calitate și rapiditate."</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">AI</div>
+                        <div class="ml-4">
+                            <h5 class="font-bold text-gray-800">Alexandru Ionescu</h5>
+                            <div class="flex text-yellow-400">
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Recomand cu încredere! Prețuri foarte bune și calitatea este impecabilă. Echipa foarte profesionistă."</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold">EP</div>
+                        <div class="ml-4">
+                            <h5 class="font-bold text-gray-800">Elena Popescu</h5>
+                            <div class="flex text-yellow-400">
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Am lucrat pentru evenimentul companiei noastre. Totul a fost perfect și la timp!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">Contactează-ne</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="text-2xl font-bold mb-6 text-gray-800">Informații de Contact</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg text-gray-600">+373 600 021 02</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg text-gray-600">contact@tipografiechisinau.md</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg text-gray-600">Chișinău, Moldova</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-medium mb-2">Nume</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-medium mb-2">Mesaj</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Trimite Mesaj
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold mb-4">LOGO</h5>
+                    <p class="text-gray-400">Tipografia ta de încredere din Chișinău. Calitate superioară la prețuri corecte.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Linkuri Rapide</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Acasă</a></li>
+                        <li><a href="#despre" class="hover:text-white transition-colors">Despre</a></li>
+                        <li><a href="#servicii" class="hover:text-white transition-colors">Servicii</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Contact</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>+373 600 021 02</li>
+                        <li>contact@tipografiechisinau.md</li>
+                        <li>Chișinău, Moldova</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Urmărește-ne</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <span class="text-sm">f</span>
+                        </a>
+                        <a href="#" class="bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <span class="text-sm">t</span>
+                        </a>
+                        <a href="#" class="bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
+                            <span class="text-sm">i</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Tipografie Chișinău. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
