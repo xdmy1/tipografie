@@ -11,6 +11,64 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-blob-1 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .gradient-blob-2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        .gradient-blob-3 {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(225deg, #f093fb, #f5576c);
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.12;
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(50px, -50px) rotate(120deg); }
+            66% { transform: translate(-30px, 30px) rotate(240deg); }
+        }
+        
+        .icon-3d {
+            background: linear-gradient(145deg, currentColor, transparent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .icon-3d::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, rgba(255,255,255,0.3), transparent);
+            border-radius: inherit;
+            z-index: -1;
         }
     </style>
 </head>
@@ -70,36 +128,31 @@
     </section>
 
     <!-- Servicii Foto/Video -->
-    <section class="py-20 bg-white">
+    <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%)">
+        <div class="gradient-blob-1 top-10 right-10"></div>
+        <div class="gradient-blob-2 bottom-20 left-20"></div>
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Serviciile Noastre</h2>
             <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="icon-3d bg-gradient-to-br from-blue-400 to-blue-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-all duration-300">
+                        <div class="text-4xl">📷</div>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Fotografie Profesională</h3>
                     <p class="text-gray-600 text-center">Evenimente, portrete, produse comerciale. Fotografii de înaltă calitate pentru orice ocazie.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                        </svg>
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="icon-3d bg-gradient-to-br from-red-400 to-red-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-all duration-300">
+                        <div class="text-4xl">🎥</div>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Videografie HD/4K</h3>
                     <p class="text-gray-600 text-center">Filmări profesionale cu echipament modern. Editare și post-producție inclusă.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H7a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
-                        </svg>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="icon-3d bg-gradient-to-br from-green-400 to-green-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-all duration-300">
+                        <div class="text-4xl">✂️</div>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Editare & Post-producție</h3>
                     <p class="text-gray-600 text-center">Servicii complete de editare foto și video cu efecte profesionale.</p>
@@ -109,11 +162,13 @@
     </section>
 
     <!-- Galerie -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-20 relative overflow-hidden" style="background: linear-gradient(45deg, #f1f5f9 0%, #e2e8f0 25%, #cbd5e1 50%, #e2e8f0 75%, #f8fafc 100%)">
+        <div class="gradient-blob-3 top-1/4 left-1/4"></div>
+        <div class="gradient-blob-1 bottom-1/3 right-1/3"></div>
         <div class="container mx-auto px-6">
             <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">Galeria Noastră</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/E91E63/FFFFFF?text=Fotografie+1" alt="Fotografie 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -124,7 +179,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/9C27B0/FFFFFF?text=Video+1" alt="Video 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -135,7 +190,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/2196F3/FFFFFF?text=Eveniment+1" alt="Eveniment 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -146,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/FF9800/FFFFFF?text=Portret+1" alt="Portret 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -157,7 +212,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/4CAF50/FFFFFF?text=Corporate+1" alt="Corporate 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -168,7 +223,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/F44336/FFFFFF?text=Nunta+1" alt="Nunta 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -179,7 +234,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/607D8B/FFFFFF?text=Produse+1" alt="Produse 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -190,7 +245,7 @@
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <img src="https://via.placeholder.com/400x300/795548/FFFFFF?text=Studio+1" alt="Studio 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -205,7 +260,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white py-12 relative overflow-hidden">
+        <div class="gradient-blob-2 top-0 left-0 opacity-5"></div>
+        <div class="gradient-blob-3 bottom-0 right-0 opacity-5"></div>
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
@@ -232,14 +289,17 @@
                 <div>
                     <h5 class="text-lg font-semibold mb-4">Urmărește-ne</h5>
                     <div class="flex space-x-4">
-                        <a href="#" class="bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
-                            <span class="text-sm">f</span>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-blue-500 to-blue-700 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">📘</div>
                         </a>
-                        <a href="#" class="bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
-                            <span class="text-sm">t</span>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-blue-400 to-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">🐦</div>
                         </a>
-                        <a href="#" class="bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
-                            <span class="text-sm">i</span>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-pink-500 to-purple-600 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">📸</div>
+                        </a>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-green-500 to-green-700 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">💬</div>
                         </a>
                     </div>
                 </div>
@@ -249,5 +309,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Attribution Bar -->
+    <div class="bg-gradient-to-r from-purple-600 to-blue-600 py-2">
+        <div class="container mx-auto px-6 text-center">
+            <a href="https://landings.md/" target="_blank" class="text-white text-sm hover:text-yellow-300 transition-colors font-medium">
+                Creare website - Landings.md
+            </a>
+        </div>
+    </div>
 </body>
 </html>

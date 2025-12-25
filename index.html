@@ -11,6 +11,64 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-blob-1 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .gradient-blob-2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        .gradient-blob-3 {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(225deg, #f093fb, #f5576c);
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.12;
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(50px, -50px) rotate(120deg); }
+            66% { transform: translate(-30px, 30px) rotate(240deg); }
+        }
+        
+        .icon-3d {
+            background: linear-gradient(145deg, currentColor, transparent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .icon-3d::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, rgba(255,255,255,0.3), transparent);
+            border-radius: inherit;
+            z-index: -1;
         }
     </style>
 </head>
@@ -63,7 +121,9 @@
     </section>
 
     <!-- Serviciile Noastre -->
-    <section id="servicii" class="py-20 bg-white">
+    <section id="servicii" class="py-20 bg-white relative overflow-hidden">
+        <div class="gradient-blob-1 top-10 left-10"></div>
+        <div class="gradient-blob-2 bottom-20 right-20"></div>
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800">Serviciile Noastre</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mb-16"></div>
@@ -74,11 +134,13 @@
     </section>
 
     <!-- Despre Noi -->
-    <section id="despre" class="py-20 bg-gray-100">
+    <section id="despre" class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%)">
+        <div class="gradient-blob-2 top-0 right-0"></div>
+        <div class="gradient-blob-3 bottom-0 left-0"></div>
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=Tipografie" alt="Despre Noi" class="rounded-xl shadow-lg">
+                    <img src="https://www.allprintheads.com/cdn/shop/articles/2600p_printshop_1.webp?v=1754891374" alt="Despre Noi" class="rounded-xl shadow-lg">
                 </div>
                 <div>
                     <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Despre Noi</h3>
@@ -94,35 +156,31 @@
     </section>
 
     <!-- De ce să ne alegi -->
-    <section class="py-20 bg-white">
+    <section class="py-20 relative overflow-hidden" style="background: linear-gradient(225deg, #ffffff 0%, #f8fafc 30%, #e2e8f0 70%, #ffffff 100%)">
+        <div class="gradient-blob-1 top-1/2 left-1/4"></div>
+        <div class="gradient-blob-3 bottom-10 right-10"></div>
         <div class="container mx-auto px-6">
             <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">De ce să ne alegi?</h3>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="icon-3d bg-gradient-to-br from-blue-400 to-blue-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-all duration-300">
+                        <div class="text-4xl">✨</div>
                     </div>
                     <h4 class="text-xl font-bold mb-4 text-gray-800">Calitate Superioară</h4>
                     <p class="text-gray-600">Folosim cele mai bune materiale și tehnologii moderne pentru rezultate impecabile.</p>
                 </div>
 
-                <div class="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
+                <div class="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="icon-3d bg-gradient-to-br from-green-400 to-green-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-all duration-300">
+                        <div class="text-4xl">⚡</div>
                     </div>
                     <h4 class="text-xl font-bold mb-4 text-gray-800">Rapiditate</h4>
                     <p class="text-gray-600">Livrăm rapid și respectăm întotdeauna termenele stabilite cu clienții.</p>
                 </div>
 
-                <div class="text-center p-8 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="bg-yellow-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-                        </svg>
+                <div class="text-center p-8 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="icon-3d bg-gradient-to-br from-yellow-400 to-orange-500 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform hover:scale-110 transition-all duration-300">
+                        <div class="text-4xl">💰</div>
                     </div>
                     <h4 class="text-xl font-bold mb-4 text-gray-800">Prețuri Corecte</h4>
                     <p class="text-gray-600">Oferim cele mai competitive prețuri pe piață, fără compromisuri la calitate.</p>
@@ -132,13 +190,15 @@
     </section>
 
     <!-- Recenzii -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-20 relative overflow-hidden" style="background: linear-gradient(45deg, #f1f5f9 0%, #e2e8f0 25%, #cbd5e1 50%, #e2e8f0 75%, #f8fafc 100%)">
+        <div class="gradient-blob-2 top-1/4 left-1/3"></div>
+        <div class="gradient-blob-1 bottom-1/4 right-1/4"></div>
         <div class="container mx-auto px-6">
             <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">Ce spun clienții noștri</h3>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">MV</div>
+                        <div class="icon-3d w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg">MV</div>
                         <div class="ml-4">
                             <h5 class="font-bold text-gray-800">Maria Vasilache</h5>
                             <div class="flex text-yellow-400">
@@ -149,9 +209,9 @@
                     <p class="text-gray-600">"Servicii excelente! Am comandat cărți de vizită și sunt foarte mulțumită de calitate și rapiditate."</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">AI</div>
+                        <div class="icon-3d w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg">AI</div>
                         <div class="ml-4">
                             <h5 class="font-bold text-gray-800">Alexandru Ionescu</h5>
                             <div class="flex text-yellow-400">
@@ -162,9 +222,9 @@
                     <p class="text-gray-600">"Recomand cu încredere! Prețuri foarte bune și calitatea este impecabilă. Echipa foarte profesionistă."</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold">EP</div>
+                        <div class="icon-3d w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg">EP</div>
                         <div class="ml-4">
                             <h5 class="font-bold text-gray-800">Elena Popescu</h5>
                             <div class="flex text-yellow-400">
@@ -179,7 +239,9 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%)">
+        <div class="gradient-blob-3 top-0 left-1/2"></div>
+        <div class="gradient-blob-1 bottom-0 right-0"></div>
         <div class="container mx-auto px-6">
             <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">Contactează-ne</h3>
             <div class="grid md:grid-cols-2 gap-12">
@@ -187,34 +249,27 @@
                     <h4 class="text-2xl font-bold mb-6 text-gray-800">Informații de Contact</h4>
                     <div class="space-y-4">
                         <div class="flex items-center">
-                            <div class="bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                </svg>
+                            <div class="icon-3d bg-gradient-to-br from-blue-400 to-blue-600 w-14 h-14 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                                <div class="text-2xl">📞</div>
                             </div>
                             <span class="text-lg text-gray-600">+373 600 021 02</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
+                            <div class="icon-3d bg-gradient-to-br from-green-400 to-green-600 w-14 h-14 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                                <div class="text-2xl">📧</div>
                             </div>
                             <span class="text-lg text-gray-600">contact@tipografiechisinau.md</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="bg-red-500 w-10 h-10 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
+                            <div class="icon-3d bg-gradient-to-br from-red-400 to-red-600 w-14 h-14 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                                <div class="text-2xl">📍</div>
                             </div>
                             <span class="text-lg text-gray-600">Chișinău, Moldova</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 p-8 rounded-xl">
+                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-100">
                     <form>
                         <div class="mb-4">
                             <label class="block text-gray-700 font-medium mb-2">Nume</label>
@@ -238,7 +293,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white py-12 relative overflow-hidden">
+        <div class="gradient-blob-2 top-0 left-0 opacity-5"></div>
+        <div class="gradient-blob-3 bottom-0 right-0 opacity-5"></div>
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
@@ -265,23 +322,35 @@
                 <div>
                     <h5 class="text-lg font-semibold mb-4">Urmărește-ne</h5>
                     <div class="flex space-x-4">
-                        <a href="#" class="bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
-                            <span class="text-sm">f</span>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-blue-500 to-blue-700 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">📘</div>
                         </a>
-                        <a href="#" class="bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
-                            <span class="text-sm">t</span>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-blue-400 to-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">🐦</div>
                         </a>
-                        <a href="#" class="bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
-                            <span class="text-sm">i</span>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-pink-500 to-purple-600 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">📸</div>
+                        </a>
+                        <a href="#" class="icon-3d bg-gradient-to-br from-green-500 to-green-700 w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg">
+                            <div class="text-xl">💬</div>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Tipografie Chișinău. Toate drepturile rezervate.</p>
+                <p>&copy; 2025 Toate drepturile rezervate.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Attribution Bar -->
+    <div class="bg-gradient-to-r from-purple-600 to-blue-600 py-2">
+        <div class="container mx-auto px-6 text-center">
+            <a href="https://landings.md/" target="_blank" class="text-white text-sm hover:text-yellow-300 transition-colors font-medium">
+                Creare website - Landings.md
+            </a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
